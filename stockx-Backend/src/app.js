@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://assignment-lavitation-frontend.vercel.app"],
+  origin: ["http://localhost:3000", "https://stock-x-seven.vercel.app"],
   credentials: true
 }));
 
