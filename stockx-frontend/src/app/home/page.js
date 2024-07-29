@@ -154,7 +154,7 @@ function Page() {
             <a href="/home" className="px-6 bg-violet-600 cursor-pointer mx-1 py-2 rounded-[5px]">
               Home
             </a>
-            <Link href="/Wallet"><div className="border cursor-pointer border-gray-600  px-6 py-2 mx-1 rounded-[5px]">
+            <Link href="/wallet"><div className="border cursor-pointer border-gray-600  px-6 py-2 mx-1 rounded-[5px]">
               Wallet
             </div>
             </Link>
