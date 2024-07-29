@@ -38,7 +38,6 @@ const MarketSideBar = ({ page }) => {
       if (data.success) {
         setPreferenceArr(data.data.preferenceArray);
       } else {
-        console.log(data.message);
       }
       setFilteredCoins(coins);
     };

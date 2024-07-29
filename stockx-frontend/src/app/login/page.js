@@ -38,7 +38,6 @@ export default function Login() {
 
     const submitdata = async () => {
         
-        console.log("submit function clicked")
         const res = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTION_BACKEND_URL}/api/v1/users/register`, {
             method: "POST",
             headers: {
@@ -71,8 +70,6 @@ export default function Login() {
     }
 
     const loginUser = async () => {
-        console.log(process.env.NEXT_PUBLIC_PRODUCTION_BACKEND_URL,"dotenv")
-        console.log("login function clicked");
         try {
             const res = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTION_BACKEND_URL}/api/v1/users/login`, {
                 method: "POST",
@@ -83,7 +80,6 @@ export default function Login() {
             });
             if (res.ok) {
                 const data = await res.json(); // Convert the readable stream to JSON
-                console.log(data); // Log the data to see the response
 
                 setTimeout(() => {
                     toast.success("User logged in successfully");

@@ -240,15 +240,12 @@ export default function UserChat({ content, gpt, setContent }) { // Destructure 
             let userMessage;
             const id = localStorage.getItem("user");
             if (!gpt) {
-                console.log("content", content);
-                console.log("user query", userQuery);
                 userMessage = {
                     role: "user",
                     content: userQuery ? userQuery : content,
                 };
                 setResponseMessage(prev => [...prev, userMessage]); // Append user message to responseMessage
             }
-            console.log(id, "vercel test");
         
             const url = `${process.env.NEXT_PUBLIC_PRODUCTION_BACKEND_URL}/api/v1/users/${gpt ? `getParticularStock/${id}` : `getStockInfo/${id}`}`
             const response = await fetch(url, {
@@ -266,7 +263,6 @@ export default function UserChat({ content, gpt, setContent }) { // Destructure 
                 throw new Error(data.error)
             }
             const data = await response.json();
-            console.log(data.data);
             setLoading(false);
             const obj = {
                 role: "bot",
@@ -282,12 +278,10 @@ export default function UserChat({ content, gpt, setContent }) { // Destructure 
         } catch (error) {
             toast.error(error.message);
             setUserQuery("");
-            console.log(error)
             setLoading(false); // Reset loading state on error
         }
     };
 
-    console.log(responseMessage);
 
     return (
         <div className="flex flex-col justify-start md:items-center min-h-screen w-screen gap-4 bg-black text-white">

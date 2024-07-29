@@ -35,7 +35,6 @@ const Chat = () => {
         getUser();
     }, []);
 
-    console.log(user);
 
     useEffect(() => {
         if (gpt) {

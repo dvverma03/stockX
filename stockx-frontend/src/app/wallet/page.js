@@ -105,9 +105,7 @@ function Page() {
     if (!data) {
       const fetchData = async () => {
         const coins = await fetchCoins();
-        console.log("coins", coins);
         setCoins(coins);
-        console.log("bit coin price", coins[10]?.sparkline_in_7d);
         setData(coins[0]?.sparkline_in_7d);
       };
       fetchData();
@@ -140,7 +138,7 @@ function Page() {
       className="bg-[#1D2939] text-white min-h-screen md:flex"
     >
       {visible && (
-        <div className="w-64 fixed top-0 left-0">
+        <div className="w-64 bg-black z-10 fixed top-0 left-0">
           <SideBar page="home" handleVisible={handleVisible} />
         </div>
       )}

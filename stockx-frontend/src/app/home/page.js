@@ -135,7 +135,7 @@ function Page() {
       className="bg-[#1D2939] text-white min-h-screen md:flex"
     >
       {visible && (
-        <div className="w-64 fixed opacity-100 top-0 left-0">
+        <div className="w-64 fixed bg-black z-10 opacity-100 top-0 left-0">
           <SideBar page="home" handleVisible={handleVisible} />
         </div>
       )}
