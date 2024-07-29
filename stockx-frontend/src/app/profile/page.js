@@ -24,7 +24,6 @@ export default function Profile() {
   const router = useRouter();
   const [key,setKey]=useState()
 
-  console.log(country);
   const obj = {
     email,
     newEmail,
@@ -39,7 +38,6 @@ export default function Profile() {
     dob: dob || "",
   };
   function submit() {
-    console.log("submit is called");
   }
   const handleSubmit = async () => {
     try {
@@ -59,7 +57,6 @@ export default function Profile() {
       if (data.success) {
         toast.success(data.message);
       }
-      console.log(data);
     } catch (err) {
       toast.error("Something went wrong!!");
     }

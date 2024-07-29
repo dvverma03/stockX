@@ -116,7 +116,6 @@ function Market() {
   const [coins, setCoins] = useState([]);
   const dispatch = useDispatch()
   const { gpt } = useSelector((store) => store)
-  console.log("data from chat", gpt);
 
   useEffect(() => {
     const fetchData = async () => {

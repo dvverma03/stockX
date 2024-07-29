@@ -20,7 +20,6 @@ export default function Landing() {
             if (data.message) {
                 toast.success("Successfully Subscribed!");
             }
-            console.log(data);
         } catch (err) {
             toast.error("Something went wrong!!");
         }
