@@ -274,7 +274,7 @@ function Page() {
           />
         </div>
         <div className="w-full flex justify-center">
-          <TradingViewWidget width={widgetWidth - 30} height={680} />
+          <TradingViewWidget width={widgetWidth} height={680} />
         </div>
       </aside>
     </div>

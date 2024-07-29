@@ -243,7 +243,7 @@ function Page() {
         className="md:w-1/5 flex-col justify-center bg-[#101828]"
       >
         <div className="w-full flex justify-center">
-          <TradingViewWidget width={widgetWidth - 30} height={980} />
+          <TradingViewWidget width={widgetWidth} height={980} />
         </div>
       </aside>
     </div>
