@@ -47,7 +47,7 @@ const Chat = () => {
 
     const [content, setContent] = useState("");
 
-    const [username, setUsername] = useState('Gagan')
+    const [username, setUsername] = useState('Deepak Verma')
 
     const [currentPage, setCurrentPage] = useState(0);
     const obj = [
